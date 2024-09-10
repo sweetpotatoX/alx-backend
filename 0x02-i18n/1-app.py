@@ -4,7 +4,6 @@
 from flask import Flask, render_template
 from flask_babel import Babel
 
-# Instantiate the Babel object
 babel = Babel()
 
 
@@ -20,7 +19,6 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    # Initialize Babel with the Flask app
     babel.init_app(app)
 
     @app.route('/')
